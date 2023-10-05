@@ -14,14 +14,14 @@ import json
 
 
 def make_CClvPack_from_json( json_data ):
-    new_level = CCLevel()
     new_level_pack = CCLevelPack()
-    new_field3 = CCMapTitleField(" ")
-    new_field6 = CCEncodedPasswordField("0000")
-    new_field7 = CCMapHintField(" ")
-    new_field8 = CCMonsterMovementField(" ")
     
     for lv in cclv_json_data:
+        new_level = CCLevel()
+        new_field3 = CCMapTitleField(" ")
+        new_field6 = CCEncodedPasswordField("0000")
+        new_field7 = CCMapHintField(" ")
+        new_field8 = CCMonsterMovementField(" ")
         
         new_level.level_number = json_data[lv]["Level"]
         new_level.time = json_data[lv]["Time limit"]
